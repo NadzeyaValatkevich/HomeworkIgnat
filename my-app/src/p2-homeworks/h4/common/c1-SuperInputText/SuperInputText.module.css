@@ -1,0 +1,27 @@
+.superInput {
+    background-color: lightgray;
+}
+
+.errorInput {
+    border: 1px solid red;
+    border-top: 3px solid red;
+    border-left: 3px solid red;
+    background-color: indianred;
+}
+
+.error {
+    color: red;
+}
+
+.finalInput {
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 300px;
+    height: 20px;
+}
+
+.finalInput:hover {
+    border: 3px solid yellow;
+    outline: none;
+}
+

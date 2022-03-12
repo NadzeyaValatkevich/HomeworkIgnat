@@ -1,0 +1,58 @@
+.someClass {
+
+}
+
+.blockAffairs {
+    margin-top: 10px;
+    width: 300px;
+}
+
+.blockAffair {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nameAffairs, .priorityAffairs, .deleteBtn {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.nameAffairs {
+    font-weight: bold;
+}
+
+.deleteBtn {
+    cursor: pointer;
+    background-color: burlywood;
+    width: 50px;
+}
+
+.deleteBtn:hover {
+    background-color: #e3cbac;
+}
+
+.chooseBtn {
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: burlywood;
+}
+
+.chooseBtn:hover {
+    background-color: #e3cbac;
+}
+
+.priorityAffairsLow {
+    color: #014601;
+}
+
+.priorityAffairsMiddle {
+    color: blue;
+}
+
+.priorityAffairsHigh {
+    color: red;
+}
+
+

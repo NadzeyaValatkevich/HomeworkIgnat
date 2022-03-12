@@ -1,0 +1,22 @@
+.default {
+    background: linear-gradient(to top, #E4AF9D 20%, #E4E4D8 50%, #A19887 80%);
+}
+
+.default:hover {
+    background: linear-gradient(to top, #e3c0b4 20%, #e8e8e5 50%, #bbb4a8 80%);
+    transition: background 0.5s 0.1s ease;
+}
+
+.default:disabled {
+    background: lightgray;
+    width: 90px;
+}
+
+.red {
+    background: red;
+}
+
+.red:hover {
+    background: #fa5656;
+    transition: background 0.5s 0.1s ease;
+}

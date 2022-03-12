@@ -1,0 +1,56 @@
+.someClass {
+}
+
+.inputBlock {
+    display: grid;
+    width: 250px;
+    height: 70px;
+    grid-template-columns: 140px 30px 30px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "input  btn   count"
+    "error error error";
+    column-gap: 20px;
+    padding: 10px;
+
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.errorMessage {
+    color: red;
+    grid-area: error;
+}
+
+.inputBlock > input {
+    height: 20px;
+    grid-area: input;
+    background-color: lightgray;
+}
+
+.inputBlock > input:hover {
+    box-shadow: 0 3px 0 black;
+}
+
+.addBtn {
+    grid-area: btn;
+    width: 40px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: burlywood;
+}
+
+.addBtn:hover {
+    cursor: pointer;
+    background-color: #e3cbac;
+}
+
+.count {
+    grid-area: count;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}

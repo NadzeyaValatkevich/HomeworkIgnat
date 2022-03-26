@@ -1,0 +1,9 @@
+.spanForEnter {
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    padding: 10px;
+    cursor: pointer;
+    color: #560156;
+
+}

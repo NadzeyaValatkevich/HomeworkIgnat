@@ -1,0 +1,17 @@
+.select {
+    width: 150px;
+    padding: 3px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url('../../arrow-down-s-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #fdced7;
+    border: 1px solid #fdabb9;
+    color:#560156;
+}
+
+.option:checked {
+    background-color: #ad03ad;
+    color: white;
+}

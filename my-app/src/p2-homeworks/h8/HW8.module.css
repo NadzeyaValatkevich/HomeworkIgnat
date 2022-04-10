@@ -1,0 +1,23 @@
+.blockHW8 {
+    width: 250px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.blockPeople {
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+}
+
+.blockMan {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.blockBtn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}

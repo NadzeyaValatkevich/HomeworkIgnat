@@ -1,0 +1,15 @@
+.blockClock {
+    margin-top: 15px;
+    width: 100px;
+}
+
+.blockDate {
+    height: 30px;
+}
+.blockTime {
+    height:30px ;
+}
+.blockBtn {
+    display: flex;
+    justify-content: space-between;
+}

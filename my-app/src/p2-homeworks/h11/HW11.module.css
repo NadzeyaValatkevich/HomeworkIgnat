@@ -1,0 +1,12 @@
+.block11 {
+    height: 100px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blockValue {
+    display: inline-block;
+    width: 25px;
+}

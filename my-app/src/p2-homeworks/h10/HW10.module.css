@@ -1,0 +1,6 @@
+.blockLoading {
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    justify-content: flex-end;
+}

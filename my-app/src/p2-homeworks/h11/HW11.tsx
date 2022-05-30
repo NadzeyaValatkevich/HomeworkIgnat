@@ -1,21 +1,31 @@
-import React, {useState} from 'react'
+import React, {ChangeEvent, useState} from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
 import s from './HW11.module.css';
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+
+
 
 function HW11() {
 
     const [value1, setValue1] = useState(0)
     const [value2, setValue2] = useState(100)
-    const [value3, setValue3] = useState<[number, number]>([0, 100]);
-    // let min = value3[0];
-    // let max = value3[1];
+
+    const [valueStep, setValueStep] = useState(1)
+    const [step, setStep] = useState(1)
 
     const onChangeRange = (newValue:number | number[]) => {
         setValue1(newValue as number);
-        setValue3(newValue as [number, number]);
-        // setValue2()
-    }
+    };
+
+    const onChangeStepHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        setValueStep(+e.currentTarget.value)
+    };
+
+    const onSaveStep = () => {
+        setStep(valueStep);
+        setValueStep(0)
+    };
 
     return (
 
@@ -23,7 +33,7 @@ function HW11() {
             <hr/>
             homeworks 11
             <div className={s.block11}>
-                <div>
+                <div className={s.blockRange}>
                     <div className={s.blockValue}>
                         <span>{value1}</span>
                     </div>
@@ -31,6 +41,10 @@ function HW11() {
                         value1={value1}
                         onChangeRange={onChangeRange}
                     />
+                    <div>
+                        <input className={s.chooseStep} type={'number'} onChange={onChangeStepHandler} value={valueStep}/>
+                    </div>
+                    <SuperButton onClick={onSaveStep}>apply</SuperButton>
                 </div>
 
                 <div>
@@ -38,10 +52,11 @@ function HW11() {
                         <span>{value1}</span>
                     </div>
                     <SuperDoubleRange
-                        value3={value3}
-                        // min={min}
-                        // max={max}
-                        onChangeRange={onChangeRange}
+                        value1={value1}
+                        value2={value2}
+                        step={step}
+                        setValue1={setValue1}
+                        setValue2={setValue2}
                     />
                     <div className={s.blockValue}>
                         <span>{value2}</span>

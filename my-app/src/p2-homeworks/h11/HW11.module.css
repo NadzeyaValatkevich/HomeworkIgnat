@@ -10,3 +10,13 @@
     display: inline-block;
     width: 25px;
 }
+.blockRange {
+    width: 400px;
+    display: flex;
+    justify-content: flex-start;
+}
+.chooseStep {
+    width: 40px;
+    margin-right: 20px;
+    background-color: #E4AF9D;
+}

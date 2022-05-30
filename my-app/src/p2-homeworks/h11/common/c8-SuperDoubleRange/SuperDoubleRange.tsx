@@ -1,46 +1,41 @@
-import React, {ChangeEvent} from 'react'
+import React, {ChangeEvent, useState} from 'react'
 import {Box, Slider} from '@material-ui/core'
 import s from '../c7-SuperRange/SuperRange.module.css'
 
 type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: [number, number]) => void
-    value3?: [number, number]
-    // min: number
-    // max: number
-    // min, max, step, disable, ...
+    setValue1: (value: number) => void
+    setValue2: (value: number) => void
+    value1: number
+    value2: number
+    step: number
 }
-
-function valuetext(value: number) {
-    return `${value}°C`;
-}
-
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
-        onChangeRange,
-        value3,
-         // min, max
-        // min, max, step, disable, ...
+        value1, value2, setValue1, setValue2, step
     }
 ) => {
- const onChangeCallback2 = (event:  ChangeEvent<{}>, newValue: number | number[]) => {
 
-     // onChangeRange && onChangeRange(newValue = [+event.currentTarget.value, +event.currentTarget.value])
-     onChangeRange && onChangeRange(newValue as [number, number])
+    const [disabled, setDisabled] = useState(false)
 
-     // setValue3(newValue as [number, number]);
-     //    setValue1(min);
+    const onChangeCallback = (event: ChangeEvent<{}>, newValue: number | number[]) => {
+        if (Array.isArray(newValue)) {
+            setValue1(newValue[0])
+            setValue2(newValue[1])
+        }
+    };
 
-    }
 
     return (
+
         <div className={s.blockSlider}>
             <Slider
+                step={step}
+                disabled={disabled}
                 getAriaLabel={() => 'Temperature range'}
-                value={value3}
-                onChange={onChangeCallback2}
+                value={[value1, value2]}
+                onChange={onChangeCallback}
                 valueLabelDisplay="auto"
-                getAriaValueText={valuetext}
             />
         </div>
     )

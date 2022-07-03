@@ -1,14 +1,19 @@
-const SWITH_THEME = 'SWITH-THEME';
+const SWITH_THEME = 'SWITCH-THEME'
+export type ThemesType = 'dark' | 'red' | 'some'
 
-type themeStateType = {
-    theme: string
-};
+export enum ThemeEnum {
+    'dark' = 'dark',
+    'red' = 'red',
+    'some' = 'some'
+}
 
 const initState = {
-    theme: 'some'
-};
+    theme: 'dark' as ThemeEnum
+}
+export type InitStateType = typeof initState
 
-export const themeReducer = (state: themeStateType = initState, action: changeThemeActionType): themeStateType => {
+export const themeReducer = (state: InitStateType = initState, action: changeThemeActionType): InitStateType => {
+    console.log(state)
     switch (action.type) {
         case SWITH_THEME: {
             return {...state, theme: action.theme};
@@ -18,7 +23,7 @@ export const themeReducer = (state: themeStateType = initState, action: changeTh
     }
 };
 
-export const changeThemeC = (theme: string) => ({
+export const changeThemeC = (theme: ThemeEnum) => ({
     type: SWITH_THEME,
     theme
 } as const);

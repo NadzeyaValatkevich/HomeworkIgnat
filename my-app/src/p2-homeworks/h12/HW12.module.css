@@ -24,6 +24,7 @@
 .some-text {
     color: darkslateblue;
 }
-.select {
+.blockSelect {
+    display: inline-block;
      margin-left: 10px;
 }

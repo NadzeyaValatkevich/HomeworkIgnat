@@ -1,3 +1,6 @@
+.blockTheme {
+    height: 200px;
+}
 .dark {
     background: dimgrey;
 }
@@ -20,4 +23,7 @@
 
 .some-text {
     color: darkslateblue;
+}
+.select {
+     margin-left: 10px;
 }

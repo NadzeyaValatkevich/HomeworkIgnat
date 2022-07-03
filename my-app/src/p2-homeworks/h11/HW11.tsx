@@ -24,7 +24,6 @@ function HW11() {
 
     const onSaveStep = () => {
         setStep(valueStep);
-        setValueStep(0)
     };
 
     return (
@@ -40,11 +39,12 @@ function HW11() {
                     <SuperRange
                         value1={value1}
                         onChangeRange={onChangeRange}
+                        step={step}
                     />
                     <div>
                         <input className={s.chooseStep} type={'number'} onChange={onChangeStepHandler} value={valueStep}/>
                     </div>
-                    <SuperButton onClick={onSaveStep}>apply</SuperButton>
+                    <SuperButton onClick={onSaveStep}>Save</SuperButton>
                 </div>
 
                 <div>

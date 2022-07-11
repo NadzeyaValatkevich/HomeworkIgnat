@@ -1,0 +1,10 @@
+.blockRequest {
+    margin-top: 10px;
+}
+.request {
+    margin-top: 10px;
+}
+.error {
+    color: red;
+    font-weight: bold;
+}
